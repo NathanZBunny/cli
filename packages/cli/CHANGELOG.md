@@ -1,5 +1,19 @@
 # @bunny.net/cli
 
+## 0.18.1
+
+### Patch Changes
+
+- [#237](https://github.com/BunnyWay/cli/pull/237) [`0f0bd10`](https://github.com/BunnyWay/cli/commit/0f0bd10a067cee1b493024da834c9aa33f0b2140) Thanks [@jamie-at-bunny](https://github.com/jamie-at-bunny)! - `bunny sites` detects Blazor WebAssembly projects and never downloads a framework CLI that isn't installed
+
+- [#236](https://github.com/BunnyWay/cli/pull/236) [`c9ab1eb`](https://github.com/BunnyWay/cli/commit/c9ab1eb5f465bdf9d472c0a256b6154095d2740c) Thanks [@jamie-at-bunny](https://github.com/jamie-at-bunny)! - Fix reading an empty `.env` value (like `BUNNY_DATABASE_URL=`) as the next line's contents
+
+- [#86](https://github.com/BunnyWay/cli/pull/86) [`7eb2a74`](https://github.com/BunnyWay/cli/commit/7eb2a7409b8cbc626970b08568f7e63641ccc340) Thanks [@burstw0w](https://github.com/burstw0w)! - Add an experimental, hidden `bunny pz` command for managing pull zones
+
+- [#241](https://github.com/BunnyWay/cli/pull/241) [`9a743f5`](https://github.com/BunnyWay/cli/commit/9a743f54b3ac0beef06dd129680870f13cdf5595) Thanks [@jamie-at-bunny](https://github.com/jamie-at-bunny)! - Publish `@bunny.net/framework-detector`: the framework presets, framework and package manager detection, and the GitHub Actions workflow behind `bunny sites`, as a dependency-free package the dashboard and the Sites control plane share with the CLI. `bunny sites deploy` now hashes content the same way on every machine and in the dashboard, whatever the locale; a site's next content deploy after upgrading gets a new content hash once, so an unchanged folder is published again rather than skipped.
+
+- [#233](https://github.com/BunnyWay/cli/pull/233) [`f228638`](https://github.com/BunnyWay/cli/commit/f22863899b2e2ad369c27eb67bab929617e6931b) Thanks [@jamie-at-bunny](https://github.com/jamie-at-bunny)! - `bunny sites create --from-zone` imports an existing storage zone and its pull zone as a site, keeping its hostnames and serving it unchanged until the first deploy
+
 ## 0.18.0
 
 ### Minor Changes
